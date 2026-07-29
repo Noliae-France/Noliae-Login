@@ -23,6 +23,11 @@ ni lire ce cookie (`HttpOnly`), ni fabriquer une session, ni connaître le secre
 HMAC. En production, partagez la session entre les sous-domaines uniquement via
 `NOLIAE_COOKIE_DOMAIN=.noliae.com` avec HTTPS et `Secure=true`.
 
+Les liens de récupération mènent vers la page frontend `/reset`, qui appelle
+`POST /v1/user/resetpassword`. Après une réinitialisation ou un changement de
+mot de passe, les sessions existantes sont volontairement révoquées et
+l’utilisateur doit se reconnecter.
+
 ## Exploitation
 
 ```sh
