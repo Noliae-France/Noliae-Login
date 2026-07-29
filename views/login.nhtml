@@ -1,41 +1,7 @@
 @model(titre: Text)
 <!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#111111">
-  <title>@titre</title>
-  <meta name="description" content="Connexion sécurisée à votre compte Noliae.">
-  <meta name="robots" content="noindex,nofollow">
-  <link rel="icon" href="/static/favicon.svg">
-  <link rel="stylesheet" href="/static/noliae.css">
-  <style>@@keyframes noliae-rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@@keyframes noliae-pulse{50%{opacity:.45;transform:scale(.78)}}.auth-story>*{animation:noliae-rise .65s cubic-bezier(.2,.8,.2,1) both}.auth-story h1{animation-delay:.08s}.auth-story .story-copy{animation-delay:.16s}.trust-card{animation-delay:.24s}.product-links{animation-delay:.32s}.auth-panel{animation:noliae-rise .7s cubic-bezier(.2,.8,.2,1) .18s both}.trust-dot{animation:noliae-pulse 1.8s ease-in-out infinite}.brand img{transition:transform .25s cubic-bezier(.2,.8,.2,1)}.brand:hover img{transform:rotate(-5deg) scale(1.08)}button{transition:transform .18s ease,background .18s ease,box-shadow .18s ease}button:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(255,77,46,.18)}input{transition:border-color .18s ease,box-shadow .18s ease,background .18s ease}@@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}</style>
-</head>
-<body>
-  <header class="topbar">
-    <a href="/" class="brand" aria-label="Noliae"><img src="/static/symbol-dark.svg" alt=""><span>noliae</span></a>
-    <p>Nouveau sur Noliae ? <a href="https://register.noliae.com">Créer un compte <b>→</b></a></p>
-  </header>
-  <main class="auth-shell">
-    <section class="auth-story">
-      <p class="eyebrow"><i></i> Noliae compte</p>
-      <h1>Content de<br>vous <em>revoir.</em></h1>
-      <p class="story-copy">Connectez-vous une fois. Votre session sécurisée vous accompagne sur l’ensemble de Noliae.</p>
-      <div class="trust-card"><span class="trust-dot"></span><div><strong>Session Noliae protégée</strong><p>Cookie HttpOnly signé, valable 24 heures et lié à votre session.</p></div></div>
-      <div class="product-links"><a href="https://noliae.com"><span>⌕</span> Search</a><a href="https://ia.noliae.com"><span>✦</span> Noliae IA</a><a href="https://account.noliae.com"><span>◌</span> Account</a></div>
-    </section>
-    <section class="auth-panel">
-      <div class="panel-heading"><p class="eyebrow">Connexion</p><h2>Votre espace.</h2><p>Utilisez votre adresse e-mail Noliae.</p></div>
-      <form action="/v1/user/login" method="post">
-        <label for="email">Adresse e-mail</label><input id="email" type="email" name="email" autocomplete="email" placeholder="vous@@noliae.com" required>
-        <div class="label-row"><label for="password">Mot de passe</label><a href="/reset">Mot de passe oublié ?</a></div><input id="password" type="password" name="password" autocomplete="current-password" required>
-        <button type="submit">Se connecter <b>→</b></button>
-      </form>
-      <p class="create">Pas encore de compte ? <a href="https://register.noliae.com">Créer un compte</a></p>
-      <p class="security-note"><i>✓</i> Connexion chiffrée et contrôlée par NolCore.</p>
-    </section>
-  </main>
-  <footer class="site-footer"><span>© Noliae</span><a href="https://noliae.com">noliae.com</a><span>Connexion sécurisée</span></footer>
-</body>
-</html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FF5A36"><title>@titre</title><meta name="description" content="Connexion sécurisée à votre compte Noliae."><meta name="robots" content="noindex,nofollow"><link rel="icon" href="/static/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@@9..40,400;9..40,500;9..40,600&family=Plus+Jakarta+Sans:wght@@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/static/noliae.css"></head>
+<body><main class="login-shell">
+<aside class="welcome"><a class="brand" href="https://noliae.com" aria-label="Noliae"><svg viewBox="0 0 140 100" aria-hidden="true"><rect x="12" y="35" width="10" height="30" rx="5"/><rect x="30" y="25" width="10" height="50" rx="5"/><rect x="48" y="15" width="10" height="70" rx="5"/><rect class="pulse" x="66" y="22" width="10" height="56" rx="5"/><rect x="84" y="20" width="10" height="60" rx="5"/><rect x="102" y="30" width="10" height="40" rx="5"/><rect x="120" y="35" width="10" height="30" rx="5"/></svg><span>noliae</span></a><div class="welcome-mid"><h1>Content de te revoir.</h1><p>Retrouve tous tes services Noliae, là où tu les as laissés.</p><div class="features"><article><span>✉</span><div><b>Ton adresse Noliae</b><small>Un seul identifiant pour huit services</small></div></article><article><span>♙</span><div><b>Chiffré et hébergé en France</b><small>Tes données restent chez toi</small></div></article><article><span>♧</span><div><b>Connexion sans mot de passe</b><small>Passkey, Touch ID ou Face ID</small></div></article></div></div><div class="proof"><span class="avatars"><i>L</i><i>M</i><i>A</i><i>S</i></span><p><b>40 000 personnes</b> utilisent Noliae chaque jour</p></div></aside>
+<section class="login-panel"><header><nav class="tabs" aria-label="Compte"><a class="active" href="/">Connexion</a><a href="https://register.noliae.com">Créer un compte</a></nav><p class="language"><b>FR</b><span>·</span><a href="#">EN</a></p></header><div class="form-stage"><div class="form-head"><h2>Bon retour.</h2><p>Connecte-toi pour reprendre où tu en étais.</p></div><button class="passkey" type="button"><i>♙</i><span><b>Continuer avec une passkey</b><small>Le plus rapide · Touch ID ou Face ID</small></span><em>→</em></button><div class="divider"><span>ou avec ton adresse</span></div><form action="/v1/user/login" method="post"><label for="email">Ton adresse e-mail</label><input id="email" type="email" name="email" autocomplete="email" placeholder="vous@@noliae.com" required><div class="label-line"><label for="password">Mot de passe</label><button type="button" class="reveal">Afficher</button></div><input id="password" type="password" name="password" autocomplete="current-password" placeholder="••••••••" required><button class="submit" type="submit">Se connecter <span>→</span></button></form><div class="links"><p>Pas encore de compte ? <a href="https://register.noliae.com">Créer un compte</a></p><a href="/reset">Mot de passe oublié</a></div></div><footer><span>© Noliae · Hébergé en France</span><span><a href="#">Confidentialité</a> · <a href="#">Aide</a></span></footer></section>
+</main></body></html>
