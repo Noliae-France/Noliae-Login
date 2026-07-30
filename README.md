@@ -28,6 +28,10 @@ Les liens de récupération mènent vers la page frontend `/reset`, qui appelle
 mot de passe, les sessions existantes sont volontairement révoquées et
 l’utilisateur doit se reconnecter.
 
+Les liens « Créer un compte » et les retours vers Account sont dérivés du
+hostname : sur `login.beta.noliae.com`, l’inscription cible
+`register.beta.noliae.com`, pas la page Login elle-même.
+
 ## Exploitation
 
 ```sh
